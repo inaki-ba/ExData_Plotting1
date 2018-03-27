@@ -6,7 +6,7 @@ plot2 <- function() {
   date_times_p<-strptime(date_time, "%d/%m/%Y %H:%M:%S");
   data<-cbind( data, date_times_p);
   
-  with( subset(data, date_times_p <="2007-02-03" & date_times_p >="2007-02-01"), plot(date_times_p, as.numeric(Global_active_power), 
+  with( subset(data, date_times_p <="2007-02-03" & date_times_p >="2007-02-01"), plot(date_times_p, as.numeric(as.character(Global_active_power)), 
                                                   type="l", xlab = "", ylab = "Global Active Power (kilowatts)"))
 
   dev.copy(png, file="plot2.png");

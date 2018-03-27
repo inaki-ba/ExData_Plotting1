@@ -8,8 +8,8 @@ plot1 <- function() {
   
   
   title("global active power")
-  with( subset(data, date_times_p <="2007-02-03" & date_times_p >="2007-02-01"), hist(as.numeric(Global_active_power),
-        breaks=14, col="red", main="Global Active Power", xlab = "Global Active Power (kilowatts)"));
+  with( subset(data, date_times_p <="2007-02-03" & date_times_p >="2007-02-01"), hist(as.numeric(as.character(Global_active_power)),
+        col="red", main="Global Active Power", xlab = "Global Active Power (kilowatts)"));
 
   dev.copy(png, file="plot1.png");
   dev.off();
